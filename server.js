@@ -92,7 +92,9 @@ function getMovie(obj) {
 }
 
 /** TODO: Your code here. Write the API endpoints */
-
+app.get('/movies/:id', function (req, res) {
+    res.send(getMovie({ "name": req.params.id }));
+});
 
 /** Start the web server and serve the index webpage */
 app.get('/', function (req, res) {
