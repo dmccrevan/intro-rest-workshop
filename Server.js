@@ -98,9 +98,6 @@ function getMovie(obj) {
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/web/index.html'));
 });
-app.get("/index.js",function(req,res){
-    res.sendFile("index.js");
-})
 app.listen(3000, () => console.log(`Server listening on port 3000!`))
 
 

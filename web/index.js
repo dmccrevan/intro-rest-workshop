@@ -1,6 +1,6 @@
 
 
-function get_movie_name(movieName){
+function getMovieNname(movieName){
 	let url = concat("http://localhost:3000/movies/name/",movieName)
 	var filmData = ""
 	fetch(url)
