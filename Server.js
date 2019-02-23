@@ -74,12 +74,12 @@ function addMovie(obj) {
 function deleteMovie(obj) {
     for (var i = 0; i < MovieData.length; i++) {
         if (obj.name == MovieData[i].name) {
-            console.log("Delete Movie: " + MovieData[i].name);
+            console.log("Deleted movie: " + MovieData[i].name);
             MovieData.splice(i, 1);
             return;
         }
     }
-    console.log("Couldn't delete Movie with name: " + obj.name);
+    console.log("Couldn't delete movie with name: " + obj.name);
 }
 
 function getMovie(obj) {
@@ -88,7 +88,7 @@ function getMovie(obj) {
             return MovieData[i];
         }
     }
-    console.log("Couldn't find Movie with name: " + obj.name);
+    console.log("Couldn't find movie with name: " + obj.name);
 }
 
 /** TODO: Your code here. Write the API endpoints */
@@ -98,7 +98,7 @@ function getMovie(obj) {
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/web/index.html'));
 });
-app.listen(3000, () => console.log(`Example app listening on port 3000!`))
+app.listen(3000, () => console.log(`Server listening on port 3000!`))
 
 
 
