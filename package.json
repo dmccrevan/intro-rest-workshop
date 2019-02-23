@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dmccrevan/intro-rest-workshop/issues"
   },
-  "homepage": "https://github.com/dmccrevan/intro-rest-workshop#readme"
+  "homepage": "https://github.com/dmccrevan/intro-rest-workshop#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
