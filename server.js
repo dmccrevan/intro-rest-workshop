@@ -95,7 +95,12 @@ function getMovie(obj) {
 
 /*Getting movie by name endpoint */
 app.get('/movies/name/:id', function (req, res) {
-    res.send(getMovie({ "name": req.params.id }));
+    result = getMovie({ "name": req.params.id });
+    if (result) {
+        res.status(200).send(result);
+    } else {
+        res.status(500).send({ "error": "Couldn't find movie named: " + req.params.id });
+    }
 });
 
 /** Start the web server and serve the index webpage */
