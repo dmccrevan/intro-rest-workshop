@@ -1,14 +1,17 @@
+var moviename = ""
 
-
-function getMovieNname(movieName){
-	let url = concat("http://localhost:3000/movies/name/",movieName)
+function getMovieName(movieName){
+	let url = "http://localhost:3000/movies/name/"+movieName
 	var filmData = ""
 	fetch(url)
 		.then(function(response){
+			console.log(response)
 			return response.json();
 		})
-		.then(function(myJson)){
-			filmData = myJson.name
-		}
+		.then(function(myJson){
+			filmData = myJson.name;
+			console.log(filmData)
+			console.log("AFDA")
+		});
 	
 }
