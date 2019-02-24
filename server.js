@@ -91,8 +91,10 @@ function getMovie(obj) {
     console.log("Couldn't find movie with name: " + obj.name);
 }
 
-/** TODO: Your code here. Write the API endpoints */
-app.get('/movies/:id', function (req, res) {
+//TODO: Write API endpoints here
+
+/*Getting movie by name endpoint */
+app.get('/movies/name/:id', function (req, res) {
     res.send(getMovie({ "name": req.params.id }));
 });
 
